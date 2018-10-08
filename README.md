@@ -24,4 +24,5 @@ switches Events
 Forms & Validation 
 
 See also - 10 PROJECTS IN JAVASCRIPT AND JQUERY COURSE: 
-https%3A%2F%2Fwww.eduonix.com%2Faffiliates%2Fid%2F16-10039-53
+https://www.eduonix.com/courses/Web-Development/Learn-Projects-In-JavaScript-And-JQuery
+
