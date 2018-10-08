@@ -1,0 +1,880 @@
+Up to the Events section of this video I was able to lump all of the sample code into one large document.  
+At the beginning of the Events section and then on through the Form section I had to create separate 
+documents for each sample of code.  I could not find anywhere that had the original sample code downloadable, 
+so I thought I would make this available after having followed along with this tutorial.
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1>Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ 
+ <div class="container">
+   
+ </div>
+  
+    <!--script>
+    var number1 = 35;
+    var number2 = '40'; //remove quotes to add two numbers
+    var twoNum = number1 + number2;
+    
+    alert('My favorite number is ' + twoNum);
+    </script-->
+
+    <!--script>
+        
+        // letters, numbers, underscores, doller signs
+        // begin with aletter
+        // _$
+        // Case sensitive
+
+        var test = 'This is a test';
+        var Test = 'This is another test';
+
+        alert(Test);
+    </script-->
+
+    <!--script>
+    //initialize myNum
+var myNum;
+    //assign myNum a value
+myNum = 2;
+alert(myNum);
+    </script-->
+
+    <!--script>  
+        //initialize array - var colors = [] -
+    // array of colors
+    var colors = ['red', 'blue', 'green'];
+    // alert(colors) //show all in the array
+    alert(colors[1]) // blue
+        // zero base count... red 0, blue 1, green 2
+    </script-->
+
+    <!--script>
+var colors = new Array('red', 'blue', 'green');
+alert(colors[2]);
+    </script-->
+
+    <!--script>
+    // add to an array by position 
+var colors = new Array('red', 'blue', 'green');
+
+colors[3] = 'yellow';
+
+alert(colors);      
+    </script-->
+    
+    <!--script>
+    /*The push() method adds new items to the end of an array, and returns the new length.
+
+Note: The new item(s) will be added at the end of the array.
+
+Note: This method changes the length of the array.
+
+Tip: To add items at the beginning of an array, use the unshift() method.*/
+
+ 
+var colors = new Array('red', 'blue', 'green');
+
+colors.push('purple');
+
+alert(colors[3]);      
+    </script-->
+
+    <script>
+      var numbers = [5,77,6,43, 'Seven'];
+      //alert(numbers[4]); // a string
+
+      //alert(numbers[0] + numbers[2]); // two numbers
+
+      //alert(numbers.length);
+       /*The --length property-- returns the length of a string 
+      (number of characters). It can also be used to find the number of values in
+      an array as shown here.*/
+
+      //alert(numbers.sort());
+      /*The sort() method sorts the items of an array.
+
+The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+
+By default, the sort() method sorts the values as strings in alphabetical and ascending order.
+
+This works well for strings ("Apple" comes before "Banana"). However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+
+Because of this, the sort() method will produce an incorrect result when sorting numbers.
+
+You can fix this by providing a "compare function" Parameter (compareFunction)  Description:
+ Optional. A function that defines an alternative sort order. The function should return a negative, zero, or positive value, depending on the arguments, like:
+function(a, b){return a-b}
+When the sort() method compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.
+
+Example:
+
+When comparing 40 and 100, the sort() method calls the compare function(40,100).
+
+The function calculates 40-100, and returns -60 (a negative value).
+
+The sort function will sort 40 as a value lower than 100.
+*/
+var points = [40, 100, 1, 5, 25, 10];
+// Sort the numbers in the array in ascending order
+// The first item in the array (points[0]) is now the lowest value
+//alert(points.sort(points));
+    </script>
+
+    <script>
+     var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      //fruits.sort();
+      //alert(fruits.reverse()); 
+    </script>
+<h1>Loops</h1>
+    <!--script>
+      for(var i = 0; i < 10; i++){
+        console.log(i);
+      }
+    </script-->
+
+    <!--script>
+      for(var i = 0; i <= 10; i++){ // includes the number ten
+        console.log(i);
+      }
+    </script-->
+
+    <!--script>
+      for(var i = 0; i <= 10; i++){ // includes the number ten
+        console.log('I love the number '+i);
+      }
+    </script-->
+<h2>The "for" loop</h2>
+    <script>
+      for(var i = 0; i <= 5; i++){ // includes the number ten
+        document.write('I love the number '+i+ '<br>');
+      }
+    </script>
+
+
+    <!--script>
+      var i = 0;
+      while(i < 5){
+        console.log(i);
+        i++;
+      }
+    </script-->
+<h2>The "forEach" loop</h2>
+    <!--script>
+      var numbers = [44,33,22,77,44,6,'joe'];
+
+      numbers.forEach(function(number){
+        document.write(number + '<br>');
+      });
+    </script-->
+    <script>
+      var names = ['Jim','James','Jack','Joe','Jake','John'];
+
+      names.forEach(function(name){
+        document.write(name + ' is a good friend!' + '<br>');
+      });
+    </script>
+    <br>
+<h3>list forEach</h3>
+    <script>
+      var names = ['Jim','James','Jack','Joe','Jake','John'];
+
+      names.forEach(function(name){
+        document.write('<li>' + name + '</li>' + '<br>');
+      });
+    </script>
+<h3>details forEach</h3>
+    <script>
+      var names = ['Jim','<summary>Best Friend</summary>My name is James','Jack','Joe','Jake','John'];
+
+      names.forEach(function(name){
+        document.write('<details>' + name + '</details>' + '<br>');
+      });
+    </script>
+
+    <script>
+      var numbers = [44,33,22,77,44,6]
+
+      for(var i = 0; i < numbers.length; i++){
+        console.log(numbers[i]);
+      }
+    </script>
+
+    <script>
+      var numbers = [44,33,22,77,44,6]
+      numbers.reverse(); // same as above only listed in reverse
+      for(var i = 0; i < numbers.length; i++){
+        console.log(numbers[i]);
+      }
+    </script>
+<h2>Conditionals</h2>
+    <script>
+if(1 == 1){
+  console.log('This is true')
+}
+    </script>
+    
+    <!--script>
+    // nothing happens because this Condition is not true
+var var1 = 3;
+var var2 = 2;
+var var3 = 3;
+
+if(var1 == var2){
+  console.log('This is true')
+}
+    </script-->
+
+    <script>
+var var1 = 3;
+var var2 = 2;
+var var3 = 3;
+
+if(var1 != var2){
+  console.log('var1 and var2 are not equal')
+}
+    </script>
+
+    <script>
+var var1 = 3;
+var var2 = 2;
+var var3 = 3;
+
+if(var1 == var2){
+  console.log('This is true')
+} else {
+  console.log('This is false')
+}
+    </script>
+
+    <script>
+var var1 = 3;
+var var2 = 3;
+// an example of the "and" Comparison Operator
+if(var1 == var2 && var1 == 3){
+  console.log('This is true')
+} else {
+  console.log('This is false')
+}
+    </script>
+
+    <script>
+var var1 = 3;
+var var2 = 4;
+// an example of the "or" Comparison Operator
+if(var1 == var2 || var1 == 3){
+  console.log('This is true')
+} else {
+  console.log('This is false')
+}
+    </script>
+<h3>Switch Statement</h3>
+<p>in source*</p>
+    <!--script>
+    var fruit = 'apple'; // Switch Statements are useful when the user can change this variable
+
+    switch(fruit){
+      case "banana":
+        alert('I hate bananas');
+        break;
+      case "apple":
+        alert('I love apples');
+        break;
+      case "orange":
+        alert('Oranges are ok');
+        break;
+      default:
+        alert('I love all other fruit');
+        break;
+    }
+      
+    </script-->
+<hr>
+<br>
+<h2> Objects </h2>
+<p>min. Marker:  https://youtu.be/vEROU2XtPR8?t=39m23s</p>
+<br>
+    <script>
+//Object literal
+
+var person = {
+    firstName: 'Brad',
+    lastName: 'Traversy',
+    age: 34, // Odject 
+    children: ['Brianna', 'Nicholas'], // Array inside this Object
+    address: {   // Object nested inside this Object
+        street: '555 somewhere st',
+        city: 'Boston',
+        state: 'MA'
+    },
+    fullName: function(){  // fuction inside this Object
+        return this.firstName +" "+ this.lastName;
+    }
+}
+
+console.log(person.address.state);
+console.log(person.fullName());
+    </script>
+
+    <script>
+// Object Cunstructor
+
+var apple = new Object();
+apple.color = 'red';
+apple.shape = 'round';  //Properties
+
+apple.describe = function(){
+    return 'An apple is the color '+this.color+' and is the shape '+this.shape;
+}
+
+console.log(apple);
+console.log(apple.color);
+console.log(apple.describe());
+    </script>
+
+    <script>
+// Cunstructor Pattern
+function Fruit(name, color, shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+
+
+}
+
+var apple = new Fruit('apple', 'red', 'round');
+
+var melon = new Fruit('melon', 'green', 'round');
+
+console.log(apple);
+console.log(melon.shape);
+    </script>
+
+            <script>
+        // Cunstructor Pattern with method inside
+        function Fruit(name, color, shape){
+            this.name = name;
+            this.color = color;
+            this.shape = shape;
+
+            this.describe = function(){
+                return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+            }
+        }
+        
+        var melon = new Fruit('melon', 'green', 'round');
+        var apple = new Fruit('apple', 'red', 'round');
+        console.log(melon.describe());
+        console.log(apple.describe());
+            </script>
+
+    <script>
+      // Arrays of Objects
+
+var users = [
+    {
+        name: 'Jon Doe',
+        age: '30'
+    },
+    {
+        name: 'Mark Smith',
+        age: '44'
+    },
+    {
+        name: 'Shelly Williams',
+        age: '20'
+    },
+    
+];
+
+console.log(users[1]);
+console.log(users[0].name);
+    </script>
+    
+</body>
+</html>
+
+
+
+Events 1
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1>Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Events</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=51m1s</p>
+ <div class="container">
+      <button onclick="doClick()">Click Me</button>
+ </div>
+    <script>
+function doClick(){
+  alert('You Click!');
+}
+    </script>
+
+ </body>
+ </html>
+Events 2
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1>Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Events</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=51m1s</p>
+ <div class="container">
+
+      <button onclick="changeText(this)">Click Me</button>
+
+ </div>
+
+    <script>
+function changeText(id){
+  id.innerHTML = 'You Clicked!';
+}
+    </script>
+
+ </body>
+ </html>
+Events 3
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Events</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=51m1s</p>
+ <div class="container">
+
+      <button onclick="changeText(this)">Click Me</button>
+
+ </div>
+
+    <script>
+function changeText(){
+  var heading = document.getElementById('heading');
+  heading.innerHTML = 'You Clicked!';
+}
+    </script>
+
+ </body>
+ </html>
+Events 5. onclick="showDate()"
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Events</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=51m1s</p>
+ <div class="container">
+      <h1 id="time"></h1>
+      <button onclick="showDate()">Show Date</button>
+
+ </div>
+
+    <script>
+function showDate(){
+    document.getElementById('time');
+    time.innerHTML = Date();
+}
+    </script>
+
+ </body>
+ </html>
+Events 5. body onload="showDate()
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body onload="showDate()">
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Events</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=51m1s</p>
+ <div class="container">
+      
+      <button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+
+ </div>
+
+    <script>
+function showDate(){
+    document.getElementById('time');
+    time.innerHTML = Date();
+}
+
+function clearDate(){
+    document.getElementById('time');
+    time.innerHTML = '';
+}
+    </script>
+<h1 id="time"></h1>
+ </body>
+ </html>
+Events 5. onmouseout="clearDate()" onmouseover="showDate()"
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Events</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=51m1s</p>
+ <div class="container">
+      
+      <button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+
+ </div>
+
+    <script>
+function showDate(){
+    document.getElementById('time');
+    time.innerHTML = Date();
+}
+
+function clearDate(){
+    document.getElementById('time');
+    time.innerHTML = '';
+}
+    </script>
+<h1 id="time"></h1>
+ </body>
+ </html>
+Forms 1. Background Color Picker (not working)
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body id="body">
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Forms</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=59m15s</p>
+ <div class="container">
+
+ <form method="post" action="something.php" name="myForm" >
+ <div>
+    <label>First Name</label>
+    <input type="text" name="firstName" id="firstName" />
+ </div>
+ <br />
+ <div>
+    <label>Last Name</label>
+    <input type="text" name="LastName" id="LastName" />
+ </div>
+ <br />
+<div>
+       <label>Backgroung</label>
+       <select name="backgroung" id="backgroung" onchange="changeBackground(this)">
+         <option value="red" >Red</option>
+         <option value="blue" >Blue</option>
+         <option value="green" >Green</option>
+       </select>
+</div>
+<br>
+<input type="submit" name="Submit">
+</form>
+ </div>
+
+<script>
+  function changeBackground(x){
+    console.log(x.value);
+    var body = document.getElementById('body');
+    body.style.backgroungColor = x.value;
+  }
+</script>
+
+
+ </body>
+ </html>
+Forms 2. Heading Color Picker
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body id='body'>
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Forms</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=59m15s</p>
+
+ <form method="post" action="something.php" name="myForm" >
+ <div>
+    <label>First Name</label>
+    <input type="text" name="firstName" id="firstName" />
+ </div>
+ <div>
+    <label>Last Name</label>
+    <input type="text" name="LastName" id="LastName" />
+ </div>
+<div>
+       <label>Backgroung</label>
+       <select name="backgroung" id="backgroung" onchange="changeBackground(this)">
+         <option value="red" >Red</option>
+         <option value="blue" >#1976d2</option>
+         <option value="green" >Green</option>
+       </select>
+</div>
+<br>
+<input type="submit" name="Submit">
+</form>
+
+<script>
+  function changeBackground(x){
+    console.log(x.value);
+    var heading = document.getElementById('heading');
+    heading.style.color = x.value;
+  }
+</script>
+
+
+ </body>
+ </html>
+Forms 3. Form Validation
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Forms</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=59m15s</p>
+
+ <form method="post" action="something.php" name="myForm" onsubmit="return validateForm()" >
+ <div>
+    <label>First Name</label>
+    <input type="text" name="firstName" id="firstName" />
+ </div>
+ <div>
+    <label>Last Name</label>
+    <input type="text" name="LastName" id="LastName" />
+ </div>
+
+<br>
+<input type="submit" name="Submit">
+</form>
+
+<script>
+function validateForm(){
+  var firstName = document.forms["myForm"]["firstName"].value;
+  if(firstName == null || firstName == ""){
+    alert("First name is required");
+    return false;
+  }
+
+  if(firstName.length < 3){
+    alert("First name must be at least three chars");
+    return false;
+  }
+}
+
+</script>
+
+ </body>
+ </html>
