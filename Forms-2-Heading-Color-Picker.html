@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body id='body'>
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Forms</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=59m15s</p>
+
+ <form method="post" action="something.php" name="myForm" >
+ <div>
+    <label>First Name</label>
+    <input type="text" name="firstName" id="firstName" />
+ </div>
+ <div>
+    <label>Last Name</label>
+    <input type="text" name="LastName" id="LastName" />
+ </div>
+<div>
+       <label>Backgroung</label>
+       <select name="backgroung" id="backgroung" onchange="changeBackground(this)">
+         <option value="red" >Red</option>
+         <option value="blue" >#1976d2</option>
+         <option value="green" >Green</option>
+       </select>
+</div>
+<br>
+<input type="submit" name="Submit">
+</form>
+
+<script>
+  function changeBackground(x){
+    console.log(x.value);
+    var heading = document.getElementById('heading');
+    heading.style.color = x.value;
+  }
+</script>
+
+
+ </body>
+ </html>
