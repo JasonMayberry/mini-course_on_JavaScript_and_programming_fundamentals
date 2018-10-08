@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Fundamentals For Beginners</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  <!--script src="js/scripts.js"></script-->
+
+    <style>
+
+    </style>
+
+  
+</head>
+
+<body>
+  
+ <div class="header">
+      <h1 id="heading">Learning Javascript</h1>
+      <p>With Brad Traversy</p>
+ </div>
+ <h2>Forms</h2>
+ <p>min. Marker: https://youtu.be/vEROU2XtPR8?t=59m15s</p>
+
+ <form method="post" action="something.php" name="myForm" onsubmit="return validateForm()" >
+ <div>
+    <label>First Name</label>
+    <input type="text" name="firstName" id="firstName" />
+ </div>
+ <div>
+    <label>Last Name</label>
+    <input type="text" name="LastName" id="LastName" />
+ </div>
+
+<br>
+<input type="submit" name="Submit">
+</form>
+
+<script>
+function validateForm(){
+  var firstName = document.forms["myForm"]["firstName"].value;
+  if(firstName == null || firstName == ""){
+    alert("First name is required");
+    return false;
+  }
+
+  if(firstName.length < 3){
+    alert("First name must be at least three chars");
+    return false;
+  }
+}
+
+</script>
+
+ </body>
+ </html>
